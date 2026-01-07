@@ -1,0 +1,9 @@
+input{
+    width: 350px;
+    height: 60px;
+    border: none;
+    outline: no;
+    background: aqua;
+    border-radius: 9px;
+    padding-left: 10px;
+}
