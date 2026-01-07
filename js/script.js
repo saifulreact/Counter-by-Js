@@ -30,3 +30,5 @@ arr.map((item)=>{
 // const thamo=setInterval(() => {
 //     count()
 // }, 1000);
+
+  AOS.init();
