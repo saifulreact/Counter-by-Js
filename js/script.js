@@ -1,15 +1,15 @@
-const input=document.querySelector("input")
-const head=document.querySelector("h1")
-const btn=document.querySelector("button")
+const result=document.querySelector(".result")
+let i=0;
 
+const count=()=>{
+    i++
+    if(i==result.dataset.saiful){
+        clearInterval(thamo)
+    }
+    result.innerHTML=i;
 
+}
 
-input.addEventListener("input",()=>{
-    btn.addEventListener("click",()=>{
-        let man=   head.innerHTML=(input.value) 
-           localStorage.setItem("saiful",man)
-    
-})
- 
-})
-
+const thamo=setInterval(() => {
+    count()
+}, 1000);
