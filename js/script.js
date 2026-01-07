@@ -1,15 +1,32 @@
-const result=document.querySelector(".result")
-let i=0;
+const result=document.querySelectorAll(".result")
+const arr=Array.from(result)
+arr.map((item)=>{
 
-const count=()=>{
-    i++
-    if(i==result.dataset.saiful){
-        clearInterval(thamo)
+    let i=0;
+    let count=()=>{
+        i++
+        item.innerHTML=i
+        if(i==item.dataset.saiful){
+            clearInterval(stop)
+        }
     }
-    result.innerHTML=i;
+    
+    const stop=setInterval(() => {
+        count()
+    }, 2000/item.dataset.saiful);
 
-}
+})
+// let i=0;
 
-const thamo=setInterval(() => {
-    count()
-}, 1000);
+// const count=()=>{
+//     i++
+//     if(i==result.dataset.saiful){
+//         clearInterval(thamo)
+//     }
+//     result.innerHTML=i;
+
+// }
+
+// const thamo=setInterval(() => {
+//     count()
+// }, 1000);
